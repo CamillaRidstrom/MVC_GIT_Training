@@ -2,5 +2,7 @@
 {
     public class Camilla
     {
+
+        // Hello, we are making progress
     }
 }
