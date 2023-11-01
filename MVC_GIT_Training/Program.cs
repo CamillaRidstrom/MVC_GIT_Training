@@ -11,7 +11,7 @@ namespace MVC_GIT_Training
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            // Configure the HTTP request pipeline
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
@@ -20,15 +20,14 @@ namespace MVC_GIT_Training
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseStaticFiles(); //wwwroot
 
-            app.UseRouting();
+			app.UseRouting();
 
-            app.UseAuthorization();
+            /*app.UseAuthorization();*/
 
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+			//{controller=Home}/{action=Index}/{id?}
+			app.MapDefaultControllerRoute();
 
             app.Run();
         }
